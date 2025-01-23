@@ -14,7 +14,7 @@ const dir = path.join(__dirname, 'secret-folder');
         [
           file.name.slice(0, file.name.length - ext.length - 1),
           ext,
-          fileStat.size + 'bytes',
+          (fileStat.size / 1024).toFixed(3) + 'kb',
         ].join(' - '),
       );
     }
